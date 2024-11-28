@@ -1,0 +1,39 @@
+-- MAS_MJComp.lua
+--
+-- MOARdV's Avionics Systems
+-- Lua scripts for an onboard computer data entry system similar to a Soyuz TM PRVI / BRVI (ПРВИ / БРВИ)
+--
+-- Author: Kurgut, from MoarDV MJComp
+--
+-- This script is public domain (although acknowledgement that Kurgut wrote it would be nice).
+
+function MAS_MJGEMComp_NumKey(key, GEMCOMP*)
+	fc.TogglePersistent(GEMCOMP*)
+
+	if (fc.GetPersistentAsNumber("MAS_MJComp_On") * mechjeb.Available()) > 0 then
+		fc.AppendPersistent("MAS_MJComp_Buffer", key, 6)
+	end
+end
+
+function MAS_MJGEMComp_AddKey(amount, GEMCOMP*)
+	fc.TogglePersistent(GEMCOMP*)
+
+	if (fc.GetPersistentAsNumber("MAS_MJComp_On") * mechjeb.Available()) > 0 then
+		fc.AddPersistentClamped("MAS_MJComp_Buffer", amount, 0, 999999)
+	end
+end
+
+function MAS_MJGEMComp_Clear(GEMCOMP*)
+	fc.TogglePersistent(GEMCOMP*)
+	if (fc.GetPersistentAsNumber("MAS_MJComp_On") * mechjeb.Available()) > 0 then
+		fc.SetPersistent("MAS_MJComp_Buffer", 0)
+	end
+end
+
+-- -- Don't have a "delete last character" function yet.
+-- function MAS_MJComp_Delete(GEMCOMP*)
+-- 	fc.TogglePersistent(GEMCOMP*)
+-- 	if (fc.GetPersistentAsNumber("MAS_MJComp_On") * mechjeb.Available()) > 0 then
+-- 		fc.SetPersistent("MAS_MJComp_Buffer", 0)
+-- 	end
+end
