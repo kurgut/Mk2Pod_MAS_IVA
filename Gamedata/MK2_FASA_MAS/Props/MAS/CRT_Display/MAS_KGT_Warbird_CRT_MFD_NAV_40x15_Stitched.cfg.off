@@ -5,7 +5,7 @@ PROP
 // MODELS
   MODEL
   {
-    model = RPK/MK2_FASA_MAS/Props/MAS/CRT_Display/Assets/PilotCRT
+    model = MK2_FASA_MAS/Props/MAS/CRT_Display/Assets/PilotCRT
   }
 
   MODEL
