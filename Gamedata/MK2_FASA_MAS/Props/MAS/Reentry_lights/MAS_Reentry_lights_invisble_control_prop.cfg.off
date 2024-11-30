@@ -1,0 +1,42 @@
+// Dummy invisible prop to Control int reentry lights in FASA gemini model
+
+PROP
+{
+	name = MAS_Reentry_lights_invisble_control_prop
+	
+	MODULE
+	{
+		name = MASComponent
+		
+		
+		INT_LIGHT
+		{
+			name = Gem Reentry lights
+			lightName = Reentry_Spot_Light_1, Reentry_Spot_Light_2
+			// intensity = fc.GetPersistentAsNumber(fc.AddPersistentClamped("Reentry_light_Pa", ((fc.StaticPressureKPa() - 0.012) * 10 - fc.GetPersistentAsNumber("Reentry_light_Pa")), 0, 1) - (fc.AddPersistentClamped("Reentry_light_Ma", ((2.9 - fc.MachNumber())  / 0.6 - fc.GetPersistentAsNumber("Reentry_light_Ma")), 0, -1)))
+			intensity = fc.CurrentThrust()
+			// variable = fc.Altitude() < fc.AtmosphereTop() and fc.MachNumber() > 2.9 and fc.StaticPressureKPa() > 0.012
+			// variable = fc.Altitude() < fc.AtmosphereTop(), fc.MachNumber() > 2.9, fc.StaticPressureKPa() > 0.012
+			// variable = fc.GetPersistentAsNumber(fc.MachNumber() > 2.9)
+			variable = fc.GetPersistentAsNumber("Reentry_light_toggle")
+		}
+	}
+}
+
+
+@INTERNAL[FASAGeminiInt2_KGT_MAS]
+{
+	PROP
+	{
+		name = MAS_Reentry_lights_invisble_control_prop
+		position = 0, 0, 0
+    	rotation = 0, 0, 0, 0
+    	scale = 1, 1, 1
+	}
+}
+
+
+// color tests fade white to orange
+// color = 255, fc.GetPersistentAsNumber(255 + ((fc.MachNumber() - 2.5) / 1.25) * -107), fc.GetPersistentAsNumber(255 + ((fc.MachNumber() - 2.5) / 1.25) * -143), 255
+// intensity = 1
+// variable = fc.GetPersistentAsNumber(fc.MachNumber( > 2.5))
