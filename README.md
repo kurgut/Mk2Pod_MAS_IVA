@@ -1,7 +1,10 @@
 # Mk2Pod_MAS_IVA
 
- This is mid-tech analog IVA for the mk2 Pod, using MoardV Avionic Systems.
+This is a mid-tech analog IVA for the mk2 Pod, using MoardV Avionic Systems.
 It's still WIP, and quite a few things don't work yet, or are broken.
+
+![screenshot31](https://github.com/user-attachments/assets/c6872634-dc27-4088-abb5-9c6c8fba15a8)
+![screenshot32](https://github.com/user-attachments/assets/6c33d774-f8f8-43a6-ae84-4e8eec9f69fb)
 
 # Installation : 
 Merge the zip's GameData folder with your KSP/GameData folder.
