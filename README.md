@@ -28,4 +28,4 @@ Merge the zip's GameData folder with your KSP/GameData folder.
 - Rocket Sound Enhancements
 
 # Credits :
-Contains assets and cfgs derived or inspired by ASET, MAS, Lonesome Robots.
+Contains assets and cfgs derived or inspired by ASET, MAS, Lonesome Robots, FASA.
