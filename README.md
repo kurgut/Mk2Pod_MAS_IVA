@@ -1,6 +1,7 @@
 # Mk2Pod_MAS_IVA
 
-This is a mid-tech analog IVA for the mk2 Pod, using MoardV Avionic Systems.
+This is a mid-tech analog IVA for the mk2 Pod, using MoardV Avionic Systems.  
+It uses the Gemini interior model from FASA.  
 It's still WIP, and quite a few things don't work yet, or are broken.
 
 ![screenshot31](https://github.com/user-attachments/assets/c6872634-dc27-4088-abb5-9c6c8fba15a8)
