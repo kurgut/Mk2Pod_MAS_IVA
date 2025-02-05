@@ -29,3 +29,4 @@ Merge the zip's GameData folder with your KSP/GameData folder.
 
 # Credits :
 Contains assets and cfgs derived or inspired by ASET, MAS, Lonesome Robots, FASA.
+Credits to user Frizzank for the original Gemini interior model.
